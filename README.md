@@ -1,16 +1,28 @@
-### Hi there 👋
+function bigger(){
+    alert("Hello, world!");
+    document.getElementById("txt").style.fontSize = "24pt";
+}
 
-<!--
-**Madusha0909/madusha0909** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+function fancy(){
+    var btn =  document.getElementById("fancy");
+    var txt = document.getElementById("txt");
+    if(btn.checked){
+        txt.style.fontWeight = "bold";
+        txt.style.color = "blue";
+        txt.style.textDecoration = "underline";
+    }
+    else {
+        txt.style.fontWeight = "normal";
+        txt.style.color = "black";
+        txt.style.textDecoration = "none";
+    }
+}
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+function moo(){
+    var txt = document.getElementById("txt");
+    txt.style.textTransform = "uppercase";
+    var str = txt.value;
+    var parts = str.split(".");
+    str = parts.join("-Moo");
+    txt.value = str;
+}
